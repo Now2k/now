@@ -2503,7 +2503,7 @@ end)
 ---
 
 local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
-local Window = OrionLib:MakeWindow({Name = "Tên Script", HidePremium = false, IntroText = "Tên Script", SaveConfig = true, ConfigFolder = "Tên Script"})
+local Window = OrionLib:MakeWindow({Name = "Tên Script", HidePremium = false, IntroText = "Tên Script", SaveConfig = true, ConfigFolder = ">_< Now.GG"})
 ----------Tab-----------------------
 local W = Window:MakeTab({
     Name = "Thông Tin",
@@ -2518,7 +2518,7 @@ local M = Window:MakeTab({
 })
 
 local ST = Window:MakeTab({
-    Name = "Cài đặt",
+    Name = "Setting",
     Icon = "rbxassetid://4483345998",
     PremiumOnly = false
 })
@@ -2530,7 +2530,7 @@ local IQ = Window:MakeTab({
 })
 
 local S = Window:MakeTab({
-    Name = "chri số",
+    Name = "chỉ số",
     Icon = "rbxassetid://4483345998",
     PremiumOnly = false
 })
@@ -2542,7 +2542,7 @@ local E = Window:MakeTab({
 })
 
 local RA = Window:MakeTab({
-    Name = "tập kích",
+    Name = "Raid",
     Icon = "rbxassetid://4483345998",
     PremiumOnly = false
 })
@@ -2554,7 +2554,7 @@ local LC = Window:MakeTab({
 })
 
 local Wld = Window:MakeTab({
-    Name = "di chuyển",
+    Name = "Teleport",
     Icon = "rbxassetid://4483345998",
     PremiumOnly = false
 })
@@ -2566,7 +2566,7 @@ local SV = Window:MakeTab({
 })
 
 local D = Window:MakeTab({
-    Name = "Trái Ác quỷ",
+    Name = "Trái Fruit",
     Icon = "rbxassetid://4483345998",
     PremiumOnly = false
 })
