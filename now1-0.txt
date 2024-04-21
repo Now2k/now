@@ -10,7 +10,6 @@ elseif game.PlaceId == 7449423635 then
     World3 = true
 else
     game:GetService("Players").LocalPlayer:Kick("Do not Support, Please wait...")
-end
 local Window = Fluent:CreateWindow({
     Title = "Xuân Anh YT",
     SubTitle = "By SketchwarePro",
@@ -23,12 +22,12 @@ local Window = Fluent:CreateWindow({
 local Tabs = {
     Main = Window:AddTab({ Title = "Main", Icon = "home" }),
     Setting = Window:AddTab({ Title = "Setting", Icon = "settings" }),
-    Stats = Window:AddTab({ Title = "Ch? S?", Icon = "plus-circle" }),
+    Stats = Window:AddTab({ Title = "stats", Icon = "plus-circle" }),
     Player = Window:AddTab({ Title = "Player", Icon = "baby" }),
     Teleport = Window:AddTab({ Title = "Teleport", Icon = "palmtree" }),
-    Fruit = Window:AddTab({ Title = "Trái Fruit", Icon = "cherry" }),
+    Fruit = Window:AddTab({ Title = "Esp-Fruit", Icon = "cherry" }),
     Raid = Window:AddTab({ Title = "Raid", Icon = "swords" }),
-    Race = Window:AddTab({ Title = "T?c V4", Icon = "chevrons-right" }),
+    Race = Window:AddTab({ Title = "Trial V4", Icon = "chevrons-right" }),
     Shop = Window:AddTab({ Title = "Shop", Icon = "shopping-cart" }),
 	Misc = Window:AddTab({ Title = "Miss", Icon = "list-plus" }),
 }
@@ -4460,11 +4459,11 @@ CamShake:Stop()
 
 
 
-    local ToggleBringMob = Tabs.Setting:AddToggle("ToggleBringMob", {Title = "Bring Mob", Default = true })
+    local ToggleBringMob = Tabs.Setting:AddToggle("ToggleBringMob", {Title = "Bring Mob", Default = false })
     ToggleBringMob:OnChanged(function(Value)
         BringMobs = Value
     end)
-    Options.ToggleBringMob:SetValue(true)
+    Options.ToggleBringMob:SetValue(false)
 	task.spawn(function()
         while task.wait() do
         if BringMobs then
