@@ -4455,7 +4455,7 @@ CamShake:Stop()
     ToggleBringMob:OnChanged(function(Value)
         BringMobs = Value
     end)
-    Options.ToggleBringMob:SetValue(true)
+    Options.ToggleBringMob:SetValue(false)
 	task.spawn(function()
         while task.wait() do
         if BringMobs then
