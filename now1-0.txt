@@ -3,10 +3,10 @@ local SaveManager = loadstring(game:HttpGet("https://raw.githubusercontent.com/d
 local InterfaceManager = loadstring(game:HttpGet("https://raw.githubusercontent.com/dawid-scripts/Fluent/master/Addons/InterfaceManager.lua"))()
 --------------------------------------------------------------------------------------------------------------------------------------------
 local Window = Fluent:CreateWindow({
-    Title = "Xu‚n Anh YT",
-    SubTitle = "By SketchwarePro",
-    TabWidth = 160,
-    Size = UDim2.fromOffset(450, 300),
+    Title = "Xu√¢n Anh YT",
+    SubTitle = "By VN",
+    TabWidth = 180,
+    Size = UDim2.fromOffset(500, 350),
     Acrylic = true, -- The blur may be detectable, setting this to false disables blur entirely
     Theme = "Darker",
     MinimizeKey = Enum.KeyCode.End -- Used when theres no MinimizeKeybind
@@ -14,14 +14,14 @@ local Window = Fluent:CreateWindow({
 local Tabs = {
     Main = Window:AddTab({ Title = "Main", Icon = "home" }),
     Setting = Window:AddTab({ Title = "Setting", Icon = "settings" }),
-    Stats = Window:AddTab({ Title = "Ch? S?", Icon = "plus-circle" }),
+    Stats = Window:AddTab({ Title = "Chi so", Icon = "plus-circle" }),
     Player = Window:AddTab({ Title = "Player", Icon = "baby" }),
     Teleport = Window:AddTab({ Title = "Teleport", Icon = "palmtree" }),
-    Fruit = Window:AddTab({ Title = "Tr·i Fruit", Icon = "cherry" }),
+    Fruit = Window:AddTab({ Title = "Esp-Fruit", Icon = "cherry" }),
     Raid = Window:AddTab({ Title = "Raid", Icon = "swords" }),
-    Race = Window:AddTab({ Title = "T?c V4", Icon = "chevrons-right" }),
+    Race = Window:AddTab({ Title = "Trial V4", Icon = "chevrons-right" }),
     Shop = Window:AddTab({ Title = "Shop", Icon = "shopping-cart" }),
-	Misc = Window:AddTab({ Title = "Miss", Icon = "list-plus" }),
+	Misc = Window:AddTab({ Title = "Sever", Icon = "list-plus" }),
 }
 local Options = Fluent.Options
 
@@ -3986,7 +3986,7 @@ ToggleAutoW:OnChanged(function(Value)
 
 
  Tabs.Main:AddParagraph({
-    Title = "Auto Treo –?o BÌ ?n",
+    Title = "Auto Treo √ê?o B√≠ ?n",
     Content = "Auto Summon Mystic Island"
 })
 
@@ -4829,17 +4829,17 @@ elseif Third_Sea then
     IslandList = {
         "Dinh Th?",
         "C?ng",
-        "C‚y D?i Th?",
-        "Ph·o –‡i TrÍn Bi?n",
+        "C√¢y D?i Th?",
+        "Ph√°o √ê√†i Tr√™n Bi?n",
         "MiniSky", 
-        "–?o Ph? N?",
-        "–?o R˘a",
-        "Nh‡ H?i T?c",
-        "–?o Kem",
-        "–?o –?u Ph?ng",
-        "–?o B·nh",
-        "–?o Cacao",
-        "–?o K?o",
+        "√ê?o Ph? N?",
+        "√ê?o R√πa",
+        "Nh√† H?i T?c",
+        "√ê?o Kem",
+        "√ê?o √ê?u Ph?ng",
+        "√ê?o B√°nh",
+        "√ê?o Cacao",
+        "√ê?o K?o",
        }
     end
 
@@ -5624,7 +5624,7 @@ Tabs.Race:AddButton({
 
 
 Tabs.Race:AddButton({
-    Title = "dÈn Ch? G?t C?n",
+    Title = "d√©n Ch? G?t C?n",
     Description = "",
     Callback = function()
         TP2(CFrame.new(28575.181640625, 14936.6279296875, 72.31636810302734))
@@ -5648,7 +5648,7 @@ Tabs.Race:AddParagraph({
 
 
 Tabs.Race:AddButton({
-    Title = "T?c B?n Th‚n",
+    Title = "T?c B?n Th√¢n",
     Description = "",
     Callback = function()
         Game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(28286.35546875, 14895.3017578125, 102.62469482421875) 
@@ -6046,7 +6046,7 @@ Tabs.Shop:AddParagraph({
 })
 
 Tabs.Shop:AddButton({
-	Title = "–?i ch? S? 2.5kF",
+	Title = "√ê?i ch? S? 2.5kF",
 	Description = "",
 	Callback = function()
 		game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("BlackbeardReward","Refund","1")
@@ -6054,7 +6054,7 @@ Tabs.Shop:AddButton({
 	end
 })
 Tabs.Shop:AddButton({
-	Title = "–?i T?c 3kF",
+	Title = "√ê?i T?c 3kF",
 	Description = "",
 	Callback = function()
 		game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("BlackbeardReward","Reroll","1")
@@ -6065,7 +6065,7 @@ Tabs.Shop:AddButton({
 --misc
 
 Tabs.Misc:AddButton({
-	Title = "V‡o L?i Sever",
+	Title = "V√†o L?i Sever",
 	Description = "",
 	Callback = function()
 		game:GetService("TeleportService"):Teleport(game.PlaceId, game:GetService("Players").LocalPlayer)
@@ -6075,7 +6075,7 @@ Tabs.Misc:AddButton({
 
 
 Tabs.Misc:AddButton({
-	Title = "–?i Sever",
+	Title = "√ê?i Sever",
 	Description = "",
 	Callback = function()
 		Hop()
@@ -6258,7 +6258,7 @@ Tabs.Misc:AddButton({
 
 
 Tabs.Misc:AddButton({
-	Title = "M‡u Haki",
+	Title = "M√†u Haki",
 	Description = "",
 	Callback = function()
 		game.Players.localPlayer.PlayerGui.Main.Colors.Visible = true
