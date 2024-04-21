@@ -3,8 +3,8 @@ local SaveManager = loadstring(game:HttpGet("https://raw.githubusercontent.com/d
 local InterfaceManager = loadstring(game:HttpGet("https://raw.githubusercontent.com/dawid-scripts/Fluent/master/Addons/InterfaceManager.lua"))()
 --------------------------------------------------------------------------------------------------------------------------------------------
 local Window = Fluent:CreateWindow({
-    Title = "Tên Hub",
-    SubTitle = "by Tên Thằng Skid",
+    Title = "Xuân Anh YT",
+    SubTitle = "By SketchwarePro",
     TabWidth = 160,
     Size = UDim2.fromOffset(450, 300),
     Acrylic = true, -- The blur may be detectable, setting this to false disables blur entirely
@@ -17,11 +17,11 @@ local Tabs = {
     Stats = Window:AddTab({ Title = "Stats", Icon = "plus-circle" }),
     Player = Window:AddTab({ Title = "Player", Icon = "baby" }),
     Teleport = Window:AddTab({ Title = "Teleport", Icon = "palmtree" }),
-    Fruit = Window:AddTab({ Title = "Devil Fruit", Icon = "cherry" }),
-    Raid = Window:AddTab({ Title = "Dungeon", Icon = "swords" }),
-    Race = Window:AddTab({ Title = "Race V4", Icon = "chevrons-right" }),
+    Fruit = Window:AddTab({ Title = "Trái Fruit", Icon = "cherry" }),
+    Raid = Window:AddTab({ Title = "Raid", Icon = "swords" }),
+    Race = Window:AddTab({ Title = "Tộc V4", Icon = "chevrons-right" }),
     Shop = Window:AddTab({ Title = "Shop", Icon = "shopping-cart" }),
-	Misc = Window:AddTab({ Title = "Misc", Icon = "list-plus" }),
+	Misc = Window:AddTab({ Title = "Cài Đặt", Icon = "list-plus" }),
 }
 local Options = Fluent.Options
 
@@ -2550,13 +2550,13 @@ local posZ = 0
     function UseCode(Text)
         game:GetService("ReplicatedStorage").Remotes.Redeem:InvokeServer(Text)
     end
-    UseCode("Sub2Fer999")
-    UseCode("Enyu_is_Pro")
-    UseCode("Magicbus")
-    UseCode("JCWK")
-    UseCode("Starcodeheo")
+    UseCode("24NOADMIN")
+    UseCode("ADMIN_TROLL")
+    UseCode("Axiore")
     UseCode("Bluxxy")
-    UseCode("THEGREATACE")
+    UseCode("SECRET_ADMIN")
+    UseCode("staffbattle")
+    UseCode("Sub2CaptainMaui")
     UseCode("SUB2GAMERROBOT_EXP1")
     UseCode("StrawHatMaine")
     UseCode("Sub2OfficialNoobie")
@@ -4749,7 +4749,7 @@ Tabs.Teleport:AddParagraph({
 })
 
 Tabs.Teleport:AddButton({
-    Title = "First Sea",
+    Title = "Sea 1",
     Description = "",
     Callback = function()
         game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("TravelMain")
@@ -4759,7 +4759,7 @@ Tabs.Teleport:AddButton({
 
 
 Tabs.Teleport:AddButton({
-    Title = "Second Sea",
+    Title = "Sea 2",
     Description = "",
     Callback = function()
         game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("TravelDressrosa")
@@ -4769,7 +4769,7 @@ Tabs.Teleport:AddButton({
 
 
 Tabs.Teleport:AddButton({
-    Title = "Third Sea",
+    Title = "Sea 3",
     Description = "",
     Callback = function()
         game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("TravelZou")
@@ -4827,19 +4827,19 @@ elseif Second_Sea then
 
 elseif Third_Sea then
     IslandList = {
-        "Mansion",
-        "Port Town",
-        "Great Tree",
-        "Castle On The Sea",
+        "Dinh Thự",
+        "Cảng",
+        "Cây Dại Thụ",
+        "Pháo Đài Trên Biển",
         "MiniSky", 
-        "Hydra Island",
-        "Floating Turtle",
-        "Haunted Castle",
-        "Ice Cream Island",
-        "Peanut Island",
-        "Cake Island",
-        "Cocoa Island",
-        "Candy Island",
+        "Đảo Phụ Nữ",
+        "Đảo Rùa",
+        "Nhà Hải Tặc",
+        "Đảo Kem",
+        "Đảo Đậu Phộng",
+        "Đảo Bánh",
+        "Đảo Cacao",
+        "Đảo Kẹo",
        }
     end
 
@@ -5648,7 +5648,7 @@ Tabs.Race:AddParagraph({
 
 
 Tabs.Race:AddButton({
-    Title = "Race Door",
+    Title = "Tộc Bản Thân",
     Description = "",
     Callback = function()
         Game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(28286.35546875, 14895.3017578125, 102.62469482421875) 
@@ -6046,7 +6046,7 @@ Tabs.Shop:AddParagraph({
 })
 
 Tabs.Shop:AddButton({
-	Title = "Refund Stats",
+	Title = "Đổi chỉ Số 2.5kF",
 	Description = "",
 	Callback = function()
 		game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("BlackbeardReward","Refund","1")
@@ -6054,7 +6054,7 @@ Tabs.Shop:AddButton({
 	end
 })
 Tabs.Shop:AddButton({
-	Title = "Reroll Race",
+	Title = "Đổi Tộc 3kF",
 	Description = "",
 	Callback = function()
 		game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("BlackbeardReward","Reroll","1")
@@ -6065,7 +6065,7 @@ Tabs.Shop:AddButton({
 --misc
 
 Tabs.Misc:AddButton({
-	Title = "Rejoin Server",
+	Title = "Vào Lại Sever",
 	Description = "",
 	Callback = function()
 		game:GetService("TeleportService"):Teleport(game.PlaceId, game:GetService("Players").LocalPlayer)
@@ -6075,7 +6075,7 @@ Tabs.Misc:AddButton({
 
 
 Tabs.Misc:AddButton({
-	Title = "Hop Server",
+	Title = "Đổi Sever",
 	Description = "",
 	Callback = function()
 		Hop()
