@@ -4504,11 +4504,11 @@ CamShake:Stop()
 
 
 
-    local ToggleBypassTP = Tabs.Setting:AddToggle("ToggleBypassTP", {Title = "Bypass Tp", Default = false })
+    local ToggleBypassTP = Tabs.Setting:AddToggle("ToggleBypassTP", {Title = "Bypass Tp", Default = true })
     ToggleBypassTP:OnChanged(function(Value)
         BypassTP = Value
     end)
-    Options.ToggleBypassTP:SetValue(false)
+    Options.ToggleBypassTP:SetValue(true)
 end
 
 
@@ -6046,7 +6046,7 @@ Tabs.Shop:AddParagraph({
 })
 
 Tabs.Shop:AddButton({
-	Title = "Refund Stats",
+	Title = "Refund Stats 2.5kF",
 	Description = "",
 	Callback = function()
 		game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("BlackbeardReward","Refund","1")
@@ -6054,7 +6054,7 @@ Tabs.Shop:AddButton({
 	end
 })
 Tabs.Shop:AddButton({
-	Title = "Reroll Race",
+	Title = "Reroll Race 3kF",
 	Description = "",
 	Callback = function()
 		game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("BlackbeardReward","Reroll","1")
@@ -6242,7 +6242,7 @@ Tabs.Misc:AddButton({
 })
 
 Tabs.Misc:AddParagraph({
-	Title = "Open Ui",
+	Title = "Shop",
 	Content = ""
 
 })
