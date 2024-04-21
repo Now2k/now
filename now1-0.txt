@@ -1,4 +1,4 @@
-if game.PlaceId == 2753915549 then
+teif game.PlaceId == 2753915549 then
     World1 = true
 elseif game.PlaceId == 4442272183 then
     World2 = true
@@ -3744,7 +3744,7 @@ local EliteProgress = M:AddLabel("")
     end)
 
     M:AddToggle({
-        Name = "Đánh Boss Bí Ẩn",
+        Name = "Đánh Boss Elite",
         Default = false,
         Flag = "Tự động Elite",
         Save = true,
