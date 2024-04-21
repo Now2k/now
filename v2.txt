@@ -198,7 +198,7 @@ function AllowRunServiceBind.OnInvoke(args)
 
         Title = "Script Fram Chest",
 
-        Text = "By: Tên",
+        Text = "Chest Pro",
 
         Icon = "rbxthumb://type=Asset&id=17214886676&w=150&h=150",
 
@@ -248,7 +248,7 @@ CoreGui:SetCore("SendNotification", {
 
     Title = "Script Fram Chest",
 
-    Text = "By: Tên",
+    Text = "Chest Pro",
 
     Icon = "rbxthumb://type=Asset&id=17214886676&w=150&h=150",
 
