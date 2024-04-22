@@ -4451,30 +4451,83 @@ CamShake:Stop()
 
 
 
-    local ToggleBringMob = Tabs.Setting:AddToggle("ToggleBringMob", {Title = "Bring Mob", Default = false })
-    ToggleBringMob:OnChanged(function(Value)
-        BringMobs = Value
+    local ToggleCake = Tabs.Main:AddToggle("ToggleCake", {Title = "Auto Farm Cake Prince", Default = false })
+ToggleCake:OnChanged(function(Value)
+ _G.CakePrince = Value
+end)
+Options.ToggleCake:SetValue(false)
+
+spawn(function()
+    while task.wait() do
+    if _G.CakePrince then
+    game.ReplicatedStorage.Remotes.CommF_:InvokeServer("CakePrinceSpawner")
+    if game.ReplicatedStorage:FindFirstChild("Cake Prince") or game:GetService("Workspace").Enemies:FindFirstChild("Cake Prince") then
+    if game:GetService("Workspace").Enemies:FindFirstChild("Cake Prince") then
+    for i,v in pairs(game.Workspace.Enemies:GetChildren()) do
+    if _G.CakePrince and v.Name == "Cake Prince" and v:FindFirstChild("HumanoidRootPart") and v:FindFirstChild("Humanoid") and v.Humanoid.Health > 0 then
+    repeat task.wait()
+    AutoHaki()
+    EquipTool(SelectWeapon)
+    Tween(v.HumanoidRootPart.CFrame * Pos)
+    v.HumanoidRootPart.Size = Vector3.new(60, 60, 60)
+    v.HumanoidRootPart.Transparency = 1
+    v.Humanoid.JumpPower = 0
+    v.Humanoid.WalkSpeed = 0
+    v.HumanoidRootPart.CanCollide = false
+    FarmPos = v.HumanoidRootPart.CFrame
+    MonFarm = v.Name
+    game:GetService'VirtualUser':CaptureController()
+    game:GetService'VirtualUser':Button1Down(Vector2.new(1280, 672),workspace.CurrentCamera.CFrame)
+	BringMobs = false
+    until not _G.CakePrince or not v.Parent or v.Humanoid.Health <= 0
+	BringMobs = true
+    end
+    end
+    else
+      if game:GetService("Workspace").Map.CakeLoaf.BigMirror.Other.Transparency == 0 and (CFrame.new(-1990.672607421875, 4532.99951171875, -14973.6748046875).Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude >= 2000 then
+    Tween(CFrame.new(-2151.82153, 149.315704, -12404.9053))
+	BirngMobs = true
+    end
+    end
+    else
+      if game:GetService("Workspace").Enemies:FindFirstChild("Cookie Crafter") or game:GetService("Workspace").Enemies:FindFirstChild("Cake Guard") or game:GetService("Workspace").Enemies:FindFirstChild("Baking Staff") or game:GetService("Workspace").Enemies:FindFirstChild("Head Baker") then
+    for i,v in pairs(game.Workspace.Enemies:GetChildren()) do
+    if v:FindFirstChild("Humanoid") and v:FindFirstChild("HumanoidRootPart") and v.Humanoid.Health > 0 then
+    if (v.Name == "Cookie Crafter" or v.Name == "Cake Guard" or v.Name == "Baking Staff" or v.Name == "Head Baker") and v:FindFirstChild("HumanoidRootPart") and v:FindFirstChild("Humanoid") and v.Humanoid.Health > 0 then
+    repeat task.wait()
+    AutoHaki()
+    EquipTool(SelectWeapon)
+    Tween(v.HumanoidRootPart.CFrame * Pos)
+    v.HumanoidRootPart.Size = Vector3.new(60, 60, 60)
+    v.HumanoidRootPart.Transparency = 1
+    v.Humanoid.JumpPower = 0
+    v.Humanoid.WalkSpeed = 0
+    v.HumanoidRootPart.CanCollide = false
+    FarmPos = v.HumanoidRootPart.CFrame
+    MonFarm = v.Name
+    game:GetService'VirtualUser':CaptureController()
+    game:GetService'VirtualUser':Button1Down(Vector2.new(1280, 672),workspace.CurrentCamera.CFrame)
+    until not _G.CakePrince or not v.Parent or v.Humanoid.Health <= 0
+    end
+    end
+    end
+    else
+      local cakepos = CFrame.new(-2077, 252, -12373)
+    if BypassTP then
+    if (game.Players.LocalPlayer.Character.HumanoidRootPart.Position - cakepos.Position).Magnitude > 2000 then
+    BTP(cakepos)
+    wait(3)
+    elseif (game.Players.LocalPlayer.Character.HumanoidRootPart.Position - cakepos.Position).Magnitude < 2000 then
+    Tween(cakepos)
+    end
+    else
+    Tween(v.HumanoidRootPart.CFrame * Pos2)
+    end
+    end
+    end
+    end
+    end
     end)
-    Options.ToggleBringMob:SetValue(false)
-	task.spawn(function()
-        while task.wait() do
-        if BringMobs then
-        pcall(function()
-          for i,v in pairs(game.Workspace.Enemies:GetChildren()) do
-          if not string.find(v.Name,"Boss") and v.Name == MonFarm and (v.HumanoidRootPart.Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude <= 350 then
-          if InMyNetWork(v.HumanoidRootPart) then
-            if InMyNetWork(v.HumanoidRootPart) then
-          v.HumanoidRootPart.CFrame = FarmPos
-          v.HumanoidRootPart.CanCollide = false
-          v.HumanoidRootPart.Size = Vector3.new(1,1,1)
-		  if v.Humanoid:FindFirstChild("Animator") then
-			v.Humanoid.Animator:Destroy()
-		end
-          end
-        end
-          end
-          end
-          end)
         end
 
     end
